@@ -8,6 +8,7 @@ import Button from './components/Button';
 import TermsOfUse from './components/TermsOfUse'; 
 import Country from './components/Country';
 import ProductList from './components/ProductList';
+import ValidEmail from './components/ValidEmail';
 
 function App() {
  
@@ -24,7 +25,7 @@ function App() {
 
     const [chosenCountry, setChosenCountry] = useState("");
 
-
+    
       
       function changeFirstNumberHandler(event) {
       
@@ -92,16 +93,13 @@ function App() {
         // return statement omitted, will be defined in the next step
       
       
-      const products = [
+      
 
-        {id: 'p1', title: 'A Book', price: 59.99},
-      
-        {id: 'p2', title: 'A Carpet', price: 129.49},
-      
-        {id: 'p3', title: 'Another Book', price: 39.99},
-      
-      ];
-
+    
+    
+ 
+  
+    
 
   return (
 
@@ -138,8 +136,12 @@ function App() {
       </div>
       
       <TermsOfUse>Show Terms of Use </TermsOfUse>
+
+      <ValidEmail></ValidEmail>
+      
+
       <Country onCountryChanged={updateCountryHandler} country = {chosenCountry}></Country>
-    <ProductList products={products}></ProductList>
+      <ProductList></ProductList>
       </div>
   );
 
