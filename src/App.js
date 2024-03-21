@@ -1,4 +1,5 @@
 import logo from './logo.svg';
+import classes from './App.css'
 import './App.css';
 import { useState } from 'react';
 import Calculation from './components/Calculation';
@@ -9,6 +10,9 @@ import TermsOfUse from './components/TermsOfUse';
 import Country from './components/Country';
 import ProductList from './components/ProductList';
 import ValidEmail from './components/ValidEmail';
+import EmailForm from './components/EmailForm';
+import Form from './components/Form';
+import Preference from './components/Preference';
 
 function App() {
  
@@ -139,10 +143,16 @@ function App() {
 
       <ValidEmail></ValidEmail>
       
+      <EmailForm></EmailForm>
 
       <Country onCountryChanged={updateCountryHandler} country = {chosenCountry}></Country>
-      <ProductList></ProductList>
+      
+      <Form></Form>
+    
+  
       </div>
+
+
   );
 
   }
